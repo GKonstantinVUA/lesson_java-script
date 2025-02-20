@@ -4,19 +4,23 @@
 //$ Вивести на екран назву транспортного засобу, яким він може керувати.
 
 //* 1. Вводимо необхідні дані
-let nameCategory = prompt("Назва категорії", "Введіть назву категорії");
+let nameCategory = prompt('Назва категорії', 'Введіть назву категорії');
 
 let resultVehicle;
 
 //* 2. Знаходимо результат
 switch (nameCategory.toUpperCase()) {
-	case "A": resultVehicle = "Мотоцикл";
+	case 'A':
+		resultVehicle = 'Мотоцикл';
 		break;
-	case "B": resultVehicle = "Легковий автомобіль";
+	case 'B':
+		resultVehicle = 'Легковий автомобіль';
 		break;
-	case "C": resultVehicle = "Вантажний автомобіль";
-		break; 
-	default: resultVehicle = "Категорія відсутня в загальному переліку, або введена з помилкою";
+	case 'C':
+		resultVehicle = 'Вантажний автомобіль';
+		break;
+	default:
+		resultVehicle = 'Категорія відсутня в загальному переліку, або введена з помилкою';
 		break;
 }
 
@@ -47,4 +51,4 @@ document.write(
 		</div>
 	</div>
 </div>`
-	);
+);
