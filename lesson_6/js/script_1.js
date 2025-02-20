@@ -1,61 +1,25 @@
 // * Задача #1. Умови
 
-//$ З клавіатури вводиться ціна товару і кількість грошей.
-//$ Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+//$ Знайти суму цифр числа, що знаходяться між першою цифрою 7 і останньою цифрою 7
+//$ (у числі є всього дві цифри 7, наприклад: 2679328712)
 
 //* 1. Вводимо необхідні дані
-let productPrice = parseFloat(prompt('Ціна товару (грн.)', 'Введіть ціну товару'))
-let amountMooney = parseFloat(prompt("Кількість грошей (грн.)", "Введіть кількість грошей"))
-let costLotteryTicket = 4
-let resultMoney
 
-//* 2. Знаходимо результат
-if (productPrice > amountMooney)
-	resultMoney = (`<div class="result"><div class="result__name-value"><span class="result__numerical-value">
-			У Вас недостатньо грошей для здійснення покупки товару</span>
-			</div>`)
-else {
-	resultMoney = (`<div class="result"><div class="result__name-value"><span class="result__numerical-value">Ви можете здійснити покупку товару</span>
-	</div>`)
+if (confirm('Почати тестування коду?')) {
+	const сonstantNumber = '2679328712';
+	const firstLetter = сonstantNumber.indexOf('7')
+	const lastLetter = сonstantNumber.lastIndexOf('7')
+	let resultSum = 0
 
-	if (amountMooney - costLotteryTicket >= productPrice)
-		resultMoney = (`<div class="result"><div class="result__name-value"><span class="result__numerical-value">З покупкою товару пропонуємо додатково придбати лотерейний білет</span></div>`)
+	//* 2. Знаходимо результат
+	
+for (let periodSum = firstLetter + 1; periodSum < lastLetter; periodSum++) {
+	if (firstLetter!==-1 && lastLetter!==-1 && firstLetter!==lastLetter)
+		resultSum += parseInt(сonstantNumber[periodSum])
 }
 
-//* 3. Виводимо результат
-document.write(
-	`
-	<div class="result">
-	<div class="result__content-body">
-
-		<div class="result__box-data">
-			<h3 class="result__table-caption">Вхідні дані</h3>
-
-			<div class="result__name-value">
-				Ціна товару (грн.):
-				<span class="result__numerical-value">
-					${productPrice}
-				</span>
-			</div>
-
-			<div class="result__name-value">
-				Кількість грошей (грн.):
-				<span class="result__numerical-value">
-					${amountMooney}
-				</span>
-			</div>
-		</div>
-
-		<div class="result__box-data">
-			<h3 class="result__table-caption">Результати обчислення</h3>
-				<div class="result__name-value">
-				<span class="result__numerical-value">
-					${resultMoney}
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
-	`
-	);
+	//* 3. Виводимо результат
 	
+	document.write(`<div class="result__box-data">
+			<div class="result__name-value"><span class="result__numerical-value"> Загальна сума: <span class="result__value-color">${resultSum}</span></div></div>`)
+}

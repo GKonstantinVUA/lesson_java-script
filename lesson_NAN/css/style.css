@@ -315,11 +315,6 @@ body {
 }
 
 .result__box-data {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
-	font-family: "Cousine";
 }
 
 .result__table-caption {
@@ -353,7 +348,6 @@ body {
 .result__name-value {
 	color: var(--fnNote);
 }
-
 .result__numerical-value {
 	color: var(--colorParagraph);
 }
@@ -363,7 +357,8 @@ body {
 }
 .result__content-body {
 }
-
+.result__box-data {
+}
 .result__table-caption {
 }
 .check {
@@ -425,8 +420,7 @@ body {
 	&:not(:last-child){
 		margin-bottom: 12px;
 	}
-}
-	.calculated--block {
+
 	display: flex;
 	height: 100%;
 	flex-direction: column;
@@ -490,52 +484,4 @@ body {
 	&:not(:last-child){
 		margin-bottom: 12px;
 	}
-}
-
-
-/*! Lesson #5 Task0 */
-.result__value-color {
-	color: var(--fnNote);
-}
-
-/*! Lesson #5 Task1 */
-.result__box5-data{
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
-	font-family: "Cousine";
-}
-
-.result__name5-value{
-	color: var(--fnNote);
-}
-
-.result__value5-color{
-	color: var(--colorParagraph);
-}
-
-/*! Lesson #5 Task2 */
-.slot-machine__block{
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
-	font-family: "Cousine";
-	&:not(:last-child){
-		margin-bottom: 20px;
-	}
-}
-
-.slot-machine__sum{
-	color: var(--colorParagraph);
-	font-family: "Cousine";
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
-}
-
-.slot-machine__value-casino {
-	color: var(--fnNote);
 }

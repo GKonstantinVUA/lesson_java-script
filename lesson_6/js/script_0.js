@@ -1,78 +1,44 @@
 // * Задача #0. Умови
 
-//$ З клавіатури вводяться імена двох дітей та кількість у них цукерок.
-//$ Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова
+//$ Інвестор вклав S тис. грн на 20 років під 20% річних, а потім на 17 років під 27% річних
+//$ Визначити за допомогою циклів суму, яку він одержить
 
 //* 1. Вводимо необхідні дані
-const nameFirstChildren = prompt("Ім'я дитини", "Введіть ім'я першої дитини");
-const amountSweetsFirstChildren = parseInt(prompt("Кількість цукерок", "Введіть кількість цукерок для першої дитини"))
+if (confirm('Почати тестування коду?')) {
+	let userMoney = parseFloat(prompt('Поле для вводу суми (грн.)', 'Введіть суму вкладу'));
+	
+	let interestRateOne = 0.2;
+	let periodInvestmentOne = 20;
+	let interestRateTwo = 0.17; 
+	let periodInvestmentTwo = 17; 
 
-const nameSecondChildren = prompt("Ім'я дитини", "Введіть ім'я другої дитини");
-const amountSweetsSecondChilder = parseInt(prompt('Кількість цукерок', 'Введіть кількість цукерок для другої дитини'))
+	let profitabilityOnePeriod = userMoney;
+	let profitabilityTwoPeriod = userMoney;
 
-let countResultCandies
+	//* 2. Знаходимо результат
+	for (let periodYear = 1; periodYear <= periodInvestmentOne; periodYear++) {
+		profitabilityOnePeriod += (((userMoney * interestRateOne * 365) / 365)+userMoney)
+	}
 
-//* 2. Знаходимо результат
+	for (let periodYear = 1; periodYear <= periodInvestmentTwo; periodYear++) {
+		profitabilityTwoPeriod += (((userMoney * interestRateTwo * 365) / 365)+userMoney)
+	}
 
-if (amountSweetsFirstChildren === amountSweetsSecondChilder) 
-
-countResultCandies = (`<div class="result">
-
-			<div class="result__name-value"><span class="result__numerical-value">${nameFirstChildren.charAt(0).toUpperCase() + nameFirstChildren.slice(1)}</span> та <span class="result__numerical-value">${nameSecondChildren.charAt(0).toUpperCase() + nameSecondChildren.slice(1)}</span> мають однакову кількість цукерок.</div>`);
-
-else
-	if (amountSweetsFirstChildren > amountSweetsSecondChilder) 
-	countResultCandies = (`<div class="result">
-
-			<div class="result__name-value">
-			<span class="result__numerical-value">${nameFirstChildren.charAt(0).toUpperCase() + nameFirstChildren.slice(1)}</span>
-			має більшу кількість цукерок ніж
-			<span class="result__numerical-value">${nameSecondChildren.charAt(0).toUpperCase() + nameSecondChildren.slice(1)}</span>
-			</div>`);
-
-else
-countResultCandies = (`<div class="result">
-			<div class="result__name-value">
-				<span class="result__numerical-value">${nameSecondChildren.charAt(0).toUpperCase() + nameSecondChildren.slice(1)}</span> має більшу кількість цукерок ніж <span class="result__numerical-value">${nameFirstChildren.charAt(0).toUpperCase() + nameFirstChildren.slice(1)}</span>
-				</div>`);
-
-
-//* 3. Виводимо результат
-document.write(
-	`
-	<div class="result">
-		<div class="result__content-body">
-
+	//* 3. Виводимо результат
+	document.write(`
 		<div class="result__box-data">
-			<h3 class="result__table-caption">Вхідні дані</h3>
-
-			<div class="result__name-value">
-				<span class="result__numerical-value">
-				${nameFirstChildren.charAt(0).toUpperCase() + nameFirstChildren.slice(1)}
-				</span>має: 
-				<span class="result__numerical-value">
-				${amountSweetsFirstChildren}
-				</span>
-				цукерки(ок)
-			</div>
-
-			<div class="result__name-value">
-				<span class="result__numerical-value">
-				${nameSecondChildren.charAt(0).toUpperCase() + nameSecondChildren.slice(1)}
-				</span>має: 
-				<span class="result__numerical-value">
-				${amountSweetsSecondChilder}
-				</span>
-				цукерки(ок)
-			</div>
-
+		<div class="result__name-value"><span class="result__numerical-value"> 
+		Сума вкладу <span class="result__value-color">${userMoney.toFixed(2)}</span> грн.
 		</div>
 
-		<div class="result__box-data">
-			<h3 class="result__table-caption">Результати обчислення</h3>
-			<div class="result__name-value">${countResultCandies}</div>
-			</div>
-	</div>
-</div>
-	`
-	);
+		<div class="result__name-value"><span class="result__numerical-value"> 
+		Сума доходу за <span class="result__value-color"> ${periodInvestmentOne} </span> років: 
+		<span class="result__value-color">${profitabilityOnePeriod.toFixed(2)}</span> грн.</span>
+		</div>
+
+		<div class="result__name-value"><span class="result__numerical-value"> 
+		Сума доходу за <span class="result__value-color"> ${periodInvestmentTwo} </span> років: 
+		<span class="result__value-color">${profitabilityTwoPeriod.toFixed(2)}</span> грн.</span>
+		</div>
+		</div>`);
+}
