@@ -109,8 +109,6 @@ body {
 
 /* !Menu elements */
 
-.menu {
-}
 .menu__body {
 	display: flex;
 	align-items: center;
@@ -135,7 +133,6 @@ body {
 }
 
 /* !Main */
-
 .main {
 	font-family: "Cousine";
 }
@@ -296,192 +293,21 @@ body {
 	color: var(--fnParagraph);
 }
 
-/*! Задача #0, 1 */
+/*! Стилі для результатів */
 
-/*! Вихідні данні таблиці*/
-
-.result__content-body {
+.result__box-data{
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
-
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-	row-gap: 20px;
+	font-family: "Cousine";
 }
 
-.result__box-data {
-}
 
-.result__table-caption {
-	color: var(--coloTitle);
-	font-size: 20px;
-
-	/* &:not(:last-child) {
-		margin-bottom: 15px;
-	} */
-}
-
-.result__table-input-data {
-	/* margin-bottom: 20px; */
-	border-collapse: collapse;
-}
-
-.table-data__subcaption th {
-	background: var(--tableFormat);
-	color: var(--fnColorTable);
-	padding: 7px 50px;
-	border: 1px solid var(--borderTable);
-}
-
-.table-data__value-table td {
-	text-align: center;
-	padding: 7px;
-	border: 1px solid var(--borderTable);
-}
-
-/*! Задача #2 */
-.result__name-value {
+.result__name-value{
 	color: var(--fnNote);
 }
-.result__numerical-value {
+
+.result__answer-value{
 	color: var(--colorParagraph);
-}
-
-/*! Задача #6 Чек*/
-.result {
-}
-.result__content-body {
-}
-.result__box-data {
-}
-.result__table-caption {
-}
-.check {
-}
-
-.check__container {
-	max-width: 300px;
-	min-height: 560px;
-	margin: 0 auto;
-	padding: 15px 8px;
-	background-color: var(--fnColorTable);
-	text-align: center;
-	line-height: 1.6;
-}
-
-.check__adress-market {
-	font-weight: 500;
-	font-size: 16px;
-	text-transform: uppercase;
-
-	&:not(:last-child){
-		margin-bottom: 14px;
-	}
-}
-
-.adress-market {
-}
-
-.adress-market__hotline {
-	text-transform: uppercase;
-	font-weight: 700;
-	&:not(:last-child){
-		margin-bottom: 16px;
-	}
-}
-.adress-market__item {
-	font-size: 12px;
-}
-
-.result__table-caption--check{
-	&:not(:last-child){
-		margin-bottom: 18px;
-	}
-}
-
-.check__line-dotted {
-	border: 1px dashed gray;
-  width: 100%;
-
-		&:not(:last-child){
-			margin-bottom: 12px;
-		}
-}
-
-.calculated {
-}
-
-.calculated--block{
-	&:not(:last-child){
-		margin-bottom: 12px;
-	}
-
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-	row-gap: 15px;
-	text-align: left;
-}
-
-.calculated__product-data {
-	font-size: 16px;
-	font-weight: 700;
-}
-
-.product-data {
-}
-.product-data__amount, .product-data__increase, .product-data__cost, .product-data__equals, .product-data__total-product {
-	font-size: 14px;
-	font-weight: 400;
-}
-.product-data__increase {
-}
-.product-data__cost {
-}
-.product-data__equals {
-}
-
-.product-data__total-product {
-}
-
-.check__cost-products {
-	font-size: 16px;
-	font-weight: 700;
-
-	&:not(:last-child){
-		margin-bottom: 12px;
-	}
-}
-
-.check__total-sum {
-}
-.check__fiscal-receipt {
-	font-size: 12px;
-	font-weight: 700;
-	&:not(:last-child){
-		margin-bottom: 12px;
-	}
-}
-
-.check__img-qr-code {
-	width: 90px;
-	height: 90px;
-	&:not(:last-child){
-		margin-bottom: 12px;
-	}
-}
-
-.check__title-fiscal {
-	font-size: 12px;
-	font-weight: 700;
-	&:not(:last-child){
-		margin-bottom: 12px;
-	}
 }

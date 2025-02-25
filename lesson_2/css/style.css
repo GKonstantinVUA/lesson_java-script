@@ -420,7 +420,8 @@ body {
 	&:not(:last-child){
 		margin-bottom: 12px;
 	}
-
+}
+	.calculated--block{
 	display: flex;
 	height: 100%;
 	flex-direction: column;
