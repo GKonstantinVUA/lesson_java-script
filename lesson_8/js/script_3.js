@@ -8,11 +8,11 @@ if (confirm('Почати тестування?')) {
 	let productsPrices = [1000, 20, 31];
 	let productsTitles = ['cheese', 'juice', 'bread'];
 	
-	function getPriceGoodsBuy(productPriceParameter, productNameParameter) {
+	function getPriceGoodsBuy(productPriceParameter, productNameParameter, parametrTotalMoney) {
 		let listProductsDisplay = [];
-		const userEnterTotalMoney = parseFloat(prompt('Поле для введення', 'Введіть загальну суму'));
+		
 		for (let stepDataProducts = 0; stepDataProducts < productPriceParameter.length; stepDataProducts++) {
-			if (productPriceParameter[stepDataProducts] <= userEnterTotalMoney) {
+			if (productPriceParameter[stepDataProducts] <= parametrTotalMoney) {
 				listProductsDisplay.push(
 					`${productNameParameter[stepDataProducts]} - ${productPriceParameter[stepDataProducts]}`
 				);
@@ -22,9 +22,10 @@ if (confirm('Почати тестування?')) {
 			}
 		}
 		if (listProductsDisplay.length === 0) {
-			document.write('<div class="result__box-data"><div class="result__name-value"> Повідомлення: <span class="result__answer-value">У вас недостатньо коштів на покупку будь-якого товару</span></div></div>');
+			document.write('<div class="result__box-data"><div class="result__name-value"> Повідомлення: <span class="result__answer-value">У вас недостатньо коштів на покупки будь-якого товару</span></div></div>');
 	}
-		return listProductsDisplay;
-	}
-	let displayResultProductsList = getPriceGoodsBuy(productsPrices, productsTitles);
+	return listProductsDisplay;
+}
+const userEnterTotalMoney = parseFloat(prompt('Поле для введення', 'Введіть загальну суму'));
+let displayResultProductsList = getPriceGoodsBuy(productsPrices, productsTitles, userEnterTotalMoney);
 }

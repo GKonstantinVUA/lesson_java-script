@@ -17,17 +17,17 @@ if (confirm('Почати тестування?')) {
 	}
 	
 	let callFunctAgvValue = averageBall(studentGradeSet)
-	document.write(`<div class="result__box-data"><div class="result__name-value"> Результат: <span class="result__answer-value">Середній бал становить: ${callFunctAgvValue}</span></div></div>`)
+	document.write(`<div class="result__box-data"><div class="result__name-value">Середній бал становить: <span class="result__answer-value">${callFunctAgvValue}</span></div></div>`)
 	
 	function getCategoryStudent(paramAvgBall) {
 		resNameCategory = ''
-		if (paramAvgBall < 4) resNameCategory = 'Категорія учня: Двієчник'
-		else if (paramAvgBall < 7) resNameCategory = 'Категорія учня: Трієчник'
-		else if (paramAvgBall < 10) resNameCategory = 'Категорія учня: Хорошист'
-		else resNameCategory = 'Категорія учня: Відмінник'
+		if (paramAvgBall < 4) resNameCategory = 'Двієчник'
+		else if (paramAvgBall < 7) resNameCategory = 'Трієчник'
+		else if (paramAvgBall < 10) resNameCategory = 'Хорошист'
+		else resNameCategory = 'Відмінник'
 		return resNameCategory
 	}
 		
 	let callFuncCategory = getCategoryStudent(callFunctAgvValue)
-	document.write(`<div class="result__box-data"><div class="result__name-value"> Результат: <span class="result__answer-value">${callFuncCategory}</span></div></div>`)
+	document.write(`<div class="result__box-data"><div class="result__name-value">Категорія учня: <span class="result__answer-value">${callFuncCategory}</span></div></div>`)
 }

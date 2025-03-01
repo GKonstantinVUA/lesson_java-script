@@ -27,9 +27,8 @@ if (confirm('Почати тестування?')) {
 		'Кіндрат',
 	];
 	
-	function getCountNumdersNameUser(arraySetNames) {
+	function getCountNumdersNameUser(arraySetNames, parametrSearchItem) {
 		let calculatiQunuantity = 0;
-		let parametrSearchItem = prompt('Введіть параметр для пошуку', 'Введіть ім\'я')
 		for (
 			let intervalBustingValues = 0; intervalBustingValues < arraySetNames.length; intervalBustingValues++) {
 			if (arraySetNames[intervalBustingValues] === parametrSearchItem) {
@@ -39,6 +38,7 @@ if (confirm('Почати тестування?')) {
 		return calculatiQunuantity;
 	}
 	
-	let resultSearchData = getCountNumdersNameUser(arrayDataNames);
+	let parametrSearchName = prompt('Введіть параметр для пошуку', 'Введіть ім\'я')
+	let resultSearchData = getCountNumdersNameUser(arrayDataNames, parametrSearchName);
 	document.write(`<div class="result__box-data"><div class="result__name-value"> Результат: <span class="result__answer-value"> ${resultSearchData} раз(и/ів)</span></div></div>`)
 }
