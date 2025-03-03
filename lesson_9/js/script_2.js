@@ -8,9 +8,13 @@ if (confirm('Почати тестування?')) {
 		3094, 2904, 937, 3514, 946, 1267, 589, 2093, 401, 775, 3272, 963, 2891, 1672, 695,
 	];
 	function getChangeGoodsPrice(parameterGroupData) {
-		return parameterGroupData.map(itemCuurent => itemCuurent > 1000 ? (itemCuurent * 0.3).toFixed(2) : itemCuurent).join(', ')
+		parameterGroupData.forEach((currentItem, IdItem, arrayCurrentData) => {
+			if (currentItem > 1000)
+			arrayCurrentData[IdItem] *= 0.3
+			else currentItem
+		})
+		return parameterGroupData.join(', ')
 	}
-	const userEnterParameter = getChangeGoodsPrice(arrayPricesWithGoods);
 
-	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value"> ${arrayPricesWithGoods}</span></div><div class="result__name-value"> Результат: <span class="result__answer-value"> ${userEnterParameter}</span></div></div>`);
+	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value"> ${arrayPricesWithGoods.join(', ')}</span></div><div class="result__name-value"> Результат: <span class="result__answer-value"> ${getChangeGoodsPrice(arrayPricesWithGoods)}</span></div></div>`);
 }

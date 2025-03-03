@@ -7,10 +7,10 @@ const arrayNamesPeople = ['Амелія', 'Костянтин', 'Сергій', 
 if (confirm('Почати тестування?')) {
 	function getArrayFirstLetterName(paramForSearch) {
 		let arrayFirstLetterName = [];
-		paramForSearch.forEach(currentNamePerson => arrayFirstLetterName.push(currentNamePerson[0]))
+		paramForSearch.map(currentNamePerson => arrayFirstLetterName.push(currentNamePerson[0]))
 		
 		return arrayFirstLetterName.join(', ');
 	}
 	let callFuncutionForSample = getArrayFirstLetterName(arrayNamesPeople)
-	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value"> ${arrayNamesPeople}</span></div><div class="result__name-value"> Результат: <span class="result__answer-value"> ${callFuncutionForSample}</span></div></div>`)
+	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value"> ${arrayNamesPeople.join(', ')}</span></div><div class="result__name-value"> Результат: <span class="result__answer-value"> ${callFuncutionForSample}</span></div></div>`)
 }
