@@ -7,25 +7,27 @@
 if (confirm('Почати тестування?')) {
 	let productsPrices = [1000, 20, 31];
 	let productsTitles = ['cheese', 'juice', 'bread'];
-	
+
 	function getPriceGoodsBuy(productPriceParameter, productNameParameter, parametrTotalMoney) {
 		let listProductsDisplay = [];
-		
+
 		for (let stepDataProducts = 0; stepDataProducts < productPriceParameter.length; stepDataProducts++) {
 			if (productPriceParameter[stepDataProducts] <= parametrTotalMoney) {
 				listProductsDisplay.push(
-					`${productNameParameter[stepDataProducts]} - ${productPriceParameter[stepDataProducts]}`
-				);
-				document.write(
-					`<div class="result__box-data"><div class="result__name-value"> Назва товару: <span class="result__answer-value"> ${productNameParameter[stepDataProducts]} - ${productPriceParameter[stepDataProducts]}</span></div></div>`
+					`Назва товару: ${productNameParameter[stepDataProducts]} - ${productPriceParameter[stepDataProducts]}<br>`
 				);
 			}
 		}
 		if (listProductsDisplay.length === 0) {
-			document.write('<div class="result__box-data"><div class="result__name-value"> Повідомлення: <span class="result__answer-value">У вас недостатньо коштів на покупки будь-якого товару</span></div></div>');
+			document.write(
+				'<div class="result__box-data"><div class="result__name-value"> Повідомляння: <span class="result__answer-value">У вас недостатньо коштів на покупку будь-якого товару</span></div></div>'
+			);
+		}
+		return listProductsDisplay.join('');
 	}
-	return listProductsDisplay;
-}
-const userEnterTotalMoney = parseFloat(prompt('Поле для введення', 'Введіть загальну суму'));
-let displayResultProductsList = getPriceGoodsBuy(productsPrices, productsTitles, userEnterTotalMoney);
+	const userEnterTotalMoney = parseFloat(prompt('Поле для введення', 'Введіть загальну суму'));
+	let displayResultProductsList = getPriceGoodsBuy(productsPrices, productsTitles, userEnterTotalMoney);
+	document.write(
+		`<div class="result__box-data"><div class="result__name-value"> <span class="result__answer-value"> ${displayResultProductsList} </span></div></div>`
+	);
 }
