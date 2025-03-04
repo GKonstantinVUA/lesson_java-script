@@ -6,8 +6,7 @@
 const arrayNamesPeople = ['Амелія', 'Костянтин', 'Сергій', 'Аглая', 'Дмитро', 'Іван', 'Аіда'];
 if (confirm('Почати тестування?')) {
 	function getArrayFirstLetterName(paramForSearch) {
-		let arrayFirstLetterName = [];
-		paramForSearch.map(currentNamePerson => arrayFirstLetterName.push(currentNamePerson[0]))
+		let arrayFirstLetterName = paramForSearch.map(currentNamePerson => currentNamePerson[0])
 		
 		return arrayFirstLetterName.join(', ');
 	}

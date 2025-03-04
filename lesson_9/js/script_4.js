@@ -6,8 +6,7 @@
 if (confirm('Почати тестування?')) {
 	const arraySetDataPrices = [7249, 8, 7511, 1507, 157, 6376, 4304, 45];
 	function getPaidTaxes(paramForAnalisis) {
-		const arraNewData = []
-		paramForAnalisis.map(currentElement => arraNewData.push(currentElement*0.2))
+		const arraNewData = paramForAnalisis.map(currentElement => currentElement*0.2)
 		return arraNewData.join(', ')
 	}
 	let enterDataPrices = getPaidTaxes(arraySetDataPrices);

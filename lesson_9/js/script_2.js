@@ -9,9 +9,7 @@ if (confirm('Почати тестування?')) {
 	];
 	function getChangeGoodsPrice(parameterGroupData) {
 		parameterGroupData.forEach((currentItem, IdItem, arrayCurrentData) => {
-			if (currentItem > 1000)
-			arrayCurrentData[IdItem] *= 0.3
-			else currentItem
+			if (currentItem > 1000) arrayCurrentData[IdItem] *= 0.3
 		})
 		return parameterGroupData.join(', ')
 	}

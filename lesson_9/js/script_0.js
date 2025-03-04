@@ -7,7 +7,8 @@ if (confirm('Почати тестування?')) {
 	const arrayValuesSum = [50, 21, 98, 86, 76, 66, 45];
 	function getSunItemsWithArray(parameterForCalculation) {
 		let calculationResult=1
-		for (let temporaryArray of parameterForCalculation) calculationResult*=temporaryArray
+		for (let temporaryArray of parameterForCalculation)
+			if (temporaryArray>0) calculationResult *= temporaryArray
 		return calculationResult
 	}
 
