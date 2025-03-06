@@ -10,5 +10,5 @@ if (confirm('Почати тестування?')) {
 		return arraNewData.join(', ')
 	}
 	let enterDataPrices = getPaidTaxes(arraySetDataPrices);
-	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value">${arraySetDataPrices.join(', ')}</span></div><div class="result__name-value"> Величини сплачених податків (грн): <span class="result__answer-value"> ${enterDataPrices}</span></div></div>`)
+	document.write(`<div class="result__box-data"><div class="result__name-value"> Вхідні дані: <span class="result__answer-value">${arraySetDataPrices.join(', ')}</span></div><div> class="result__name-value"> Величини сплачених податків (грн): <span class="result__answer-value"> ${enterDataPrices}</span></div></div>`)
 }
