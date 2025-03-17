@@ -586,3 +586,8 @@ body {
 	}
 }
 
+.cell-task__caption-section{
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--name8);
+}
