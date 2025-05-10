@@ -1,0 +1,313 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("fonts.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family="FiraCode":regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cousine:regular,italic,700&display=swap");
+
+:root {
+	--bgFooter: #114471;
+	--bfmain: #e2e7e7;
+	--coloTitle: #7c7c7c;
+	--colorParagraph: #eb3f01;
+	--fnNote: #1a2e53;
+	--fnParagraph: #e3440b;
+	--name7: #e3440b;
+	--name8: #e3440b;
+	--bgHeader: #bbdcff;
+	--name2: #68cacd;
+	--name3: #198496;
+	--bgHoverItem: #ff6b00;
+	--bgFooter: #152239;
+	--fnItemLang: #999999;
+	--tableFormat: #ff4500;
+	--fnColorTable: #f0f8ff;
+	--borderTable: #808080;
+
+	--minHeightHeader: 82px;
+
+	--dejaVuSansMonoBold: "DejaVuSansMono-Bold";
+	--dejaVuSansMonoOblique: "DejaVuSansMono-Oblique";
+	--droidSansMono: "DroidSansMono";
+}
+
+.wrapper {
+	overflow: clip;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.wrapper > main {
+}
+
+.footer--block {
+	/* background-color: var(--bgFooter); */
+	min-height: 80px;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+body {
+	background-color: var(--bfmain);
+	font-size: 18px;
+	font-weight: 400;
+	font-family: "PT Mono";
+	line-height: 1.2;
+}
+
+/*! Header */
+.header {
+	background-color: var(--bgHeader);
+	padding: 15px 0;
+	font-family: "Fira Code";
+	font-weight: 500;
+	min-height: var(--minHeightHeader);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	border-bottom: 1px solid var(--fnItemLang);
+}
+
+.header__container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header__content-head {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	column-gap: 40px;
+	row-gap: 20px;
+}
+
+.header__logo-lesson {
+	width: 50px;
+	height: 50px;
+}
+
+.header__title-lessons {
+	font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem); /* !24-18 (1200-320) */
+	font-family: "Cousine";
+	color: var(--bgFooter);
+}
+
+/* !Menu elements */
+
+.menu__body {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 10px;
+}
+
+.cell-task__perform {
+	width: 25px;
+	height: 25px;
+}
+
+.cell-task__page-task-link {
+	transition: all 0.25s ease-in;
+
+	@media (any-hover: hover) {
+		cursor: pointer;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+/* !Main */
+.main {
+	font-family: "Cousine";
+}
+
+.main--block {
+	padding-top: calc(var(--minHeightHeader) + 80px);
+	padding-bottom: 30px;
+
+	@media (max-width: 614px) {
+		padding-top: calc(var(--minHeightHeader) + 80px);
+	}
+}
+
+/*! Сторінка із задачами */
+.tasks--setup {
+	padding: 0 15px;
+}
+
+.tasks__container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px; /* !40-20 (1200-320) */
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 30px;
+}
+
+.lesson--setup {
+	width: 100%;
+}
+
+.lesson__body {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: clamp(0.938rem, 0.369rem + 2.84vw, 2.5rem); /*!40-15 (1200-320) */
+}
+
+.task__box {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 10px;
+}
+
+.cell-task__caption {
+	color: var(--coloTitle);
+	font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem); /*!20-16 (1200-320) */
+}
+
+.cell-task__group-item {
+	display: flex;
+	width: 100%;
+	/* flex-wrap: wrap; */
+	align-items: flex-start;
+	justify-content: space-between;
+	column-gap: 30px;
+}
+
+.cell-task__desk {
+	max-width: 760px;
+	width: 100%;
+	font-family: var(--droidSansMono);
+	color: var(--fnParagraph);
+	font-size: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem); /*!18-12 (1200-320) */
+}
+
+.cell-decision__box-formulas {
+	counter-reset: item;
+
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 12px;
+	font-family: var(--droidSansMono);
+	font-size: 20px;
+	color: var(--fnParagraph);
+}
+
+.formula-case__body::before {
+	counter-increment: item;
+	content: counter(item) ")";
+}
+
+/*! Сторінка з розв'язанням задачі */
+.result {
+	font-family: "Cousine";
+	line-height: 1.2;
+}
+
+.main__page-lessons-link {
+	transition: all 0.25s ease-in;
+
+	@media (any-hover: hover) {
+		cursor: pointer;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.main__icon-svg {
+	width: 25px;
+	height: 25px;
+}
+
+.decision__box {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 50px;
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+.cell-decision__circumstances {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 15px;
+}
+
+.cell-decision__caption,
+.result-caption__name {
+	color: var(--coloTitle);
+	font-size: 20px;
+}
+
+.cell-decision__group-item {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 20px;
+}
+
+.cell-decision__desk {
+	max-width: 760px;
+	width: 100%;
+	font-family: var(--droidSansMono);
+	color: var(--fnParagraph);
+}
+
+/*! Стилі для результатів */
+
+.result__box-data{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	font-family: "Cousine";
+}
+
+
+.result__name-value{
+	color: var(--fnNote);
+}
+
+.result__answer-value{
+	color: var(--colorParagraph);
+}

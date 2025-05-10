@@ -34,7 +34,7 @@ if (confirm('Почати тестування?')) {
 	}
 	callFunsResSumArrayFirstQuarter = getSumDataArray(callFunctionBuildArray)
 	document.write(`
-		<div><div class="result__box-data">
+		<div class="result__box-data">
 		<div class="result__name-value"> 
 		Результат:
 		<span class="result__answer-value">${callFunsResSumArrayFirstQuarter}

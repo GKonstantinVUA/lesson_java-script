@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "DejaVuSansMono-Bold";
+    src: url('../fonts/DejaVuSansMono-Bold.woff2') format('woff2'),
+        url('../fonts/DejaVuSansMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DejaVuSansMono-Oblique";
+    src: url('../fonts/DejaVuSansMono-Oblique.woff2') format('woff2'),
+        url('../fonts/DejaVuSansMono-Oblique.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DroidSansMono";
+    src: url('../fonts/DroidSansMono.woff2') format('woff2'),
+        url('../fonts/DroidSansMono.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -37,7 +37,7 @@ if (confirm('Почати тестування?')) {
 				profitEachStoreWeek += paramDataForAnalysis[stepEachStore][profitEachStore];
 			}
 			document.write(` 
-		<div><div class="result__box-data">
+		<div class="result__box-data">
 		<div class="result__name-value"> 
 		Магазин # <span class="result__answer-value"> ${stepEachStore + 1}</span>: <span class="result__answer-value"> ${profitEachStoreWeek}</span> грн.</div>
 		</div>`);

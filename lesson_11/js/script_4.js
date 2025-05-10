@@ -33,7 +33,7 @@ if (confirm('Почати тестування?')) {
 	}
 	
 	let callFunctionPairdRowsArray = getSumPairedRows(callFunctionBuildArray);
-	document.write(`<div><div class="result__box-data">
+	document.write(`<div class="result__box-data">
 		<div class="result__name-value"> 
 		Результат:
 		<span class="result__answer-value"> ${callFunctionPairdRowsArray}</span>
